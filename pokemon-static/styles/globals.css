@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    --background: #000000e2; 
+    --text-color: #000000; 
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text-color);
+  }
+
+
+  @keyframes zoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  .zoom:hover {
+    animation: zoom 0.3s ease-in-out forwards;
+  }
+
+
+  .underline-effect {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+ 
+  }
+  
+  .underline-effect::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: black; 
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .underline-effect:hover {
+    transform: scale(1.1); 
+    width: 100%;
+  }
+
+  .underline-effect:hover::after {
+    width: 100%;
+  }
