@@ -1,0 +1,15 @@
+/* styles.css */
+
+  .link {
+    @apply mr-3 px-1 text-white transition duration-200 ease-in-out;
+    border: 1px solid transparent; /* Establece un borde transparente inicialmente */
+  }
+  
+  .activeLink {
+    @apply border border-zinc-400 text-zinc-400; /* Cambia solo el color del borde al pasar el mouse */
+  }
+
+  .link:hover {
+    @apply border border-zinc-400 text-zinc-400; /* Cambia solo el color del borde al pasar el mouse */
+  }
+  
