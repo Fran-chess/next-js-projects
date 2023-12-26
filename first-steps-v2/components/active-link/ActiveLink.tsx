@@ -10,7 +10,6 @@ interface Props {
 
 const ActiveLink = ({ path, text }: Props) => {
   const pathName = usePathname();
-  console.log(pathName)
   return (
     <Link
       className={`${style.link} ${(pathName === path) && style.activeLink}`}
