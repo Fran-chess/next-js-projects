@@ -11,9 +11,7 @@ export default function SectionLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Navigation />
-
-        <h1>estoy en todos lados layout</h1>
+        <Navigation />
         {children}
       </body>
     </html>

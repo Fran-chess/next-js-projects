@@ -1,8 +1,8 @@
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
-  redirect('/main')
-
-
+  return redirect("/main");
 }
