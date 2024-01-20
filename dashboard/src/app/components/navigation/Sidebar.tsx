@@ -14,10 +14,15 @@ const menuItems = [
     title: "New Counter",
     text: "Create a new counter",
   },
+  {
+    path: "/pokemons",
+    title: "Pokémons",
+    text: "Watch about Pokémons",
+  },
 ];
 const Sidebar = () => {
   return (
-    <nav className="bg-zinc-950 py-3 px-6 text-white w-96 h-screen">
+    <nav className=" py-3 px-6 text-white w-96">
       <Link href={"/"}>
         <div className="text-6xl -ml-2.5">
         <RiFontSansSerif />
