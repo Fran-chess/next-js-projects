@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   min-width: 0;
   font: inherit;
   position: relative;
   background-color: black;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-boxs;
 }
 
-
-img, video, svg {
+img,
+video,
+svg {
   display: block;
   height: auto;
   max-width: 100%;
@@ -26,14 +28,54 @@ body {
   min-height: 100dvh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-p{
+p {
   text-wrap: pretty;
-
 }
 
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 
+.zoom:hover {
+  animation: zoom 0.3s ease-in-out forwards;
+}
 
+.underline-effect {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-effect:hover {
+  transform: scale(1.1);
+  width: 100%;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
+}
